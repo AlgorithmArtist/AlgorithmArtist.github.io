@@ -1,22 +1,62 @@
+@font-face {
+    font-family: Manrope;
+    src: url(font/Manrope.ttf);
+}
 *{
-    font-family: sans-serif;
     box-sizing: border-box;
 }
+@media (orientation: portrait){
+    .hero h1{
+        font-size: 7.5vh !important;
+        letter-spacing: -0.3em;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+    }
+}
+@media only screen and (max-width: 1250px){
+    .hero h1{
+        font-size: 10vw;
+    }
+}
+@media only screen and (min-width: 1251px){
+    .hero h1{
+        font-size: 85pt;
+    }
+}
 html,body{
-    min-width: 100%;
+    width: 100%;
     height: 100%;
     margin: 0px;
     position: relative;
+    scroll-behavior: smooth;
     background-color: #0f111a;
 }
-div{
+/*Bootstrap font icons fix*/
+i.bi{
+    display: contents;
+}
+/*Hero style*/
+.hero{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-family: Manrope;
+    background-size: cover;
+    background-position: center;
+    background-image: url(media/widescreenBackdrop.svg);
+}
+.hero h1{
     top: 50%;
     left: 50%;
-    margin: 0px;
-    padding: 3em;
-    border-radius: 1rem;
+    margin: 0;
+    padding: 0.5em;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
     position: absolute;
+    color: #ffffffcc;
+    background-color: #00000088;
+    outline: 5px solid #000000aa;
+    outline-offset: 10px;
     transform: translate(-50%, -50%);
-    background-color: #27AE60;
-    box-shadow: 0px 0px 150px 0px rgba(39,174,96,0.75);
+    backdrop-filter: blur(1.5rem);
 }
